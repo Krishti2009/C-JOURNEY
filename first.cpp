@@ -16,10 +16,18 @@
 // }
 #include <iostream>
 #include <string>
-using str_t = std::string;
+
 int main()
 {
-    str_t name = "Kanchu";
-    std::cout << name;
+    std::string name;
+    std::cout << "TESTING NOW..." << std::endl;
+    std::cout << "Please type your name: ";
+
+    if (!(std::cin >> name))
+    {
+        return 0;
+    }
+
+    std::cout << "It worked! Hello " << name << std::endl;
     return 0;
 }
