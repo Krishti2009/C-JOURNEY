@@ -59,3 +59,31 @@ int main()
     std::cout << "Name:" << s1.name << std::endl;
     std::cout << "Reasearch:" << s1.research;
 }
+// Multiple inheritance
+#include <iostream>
+#include <string>
+class Student
+{
+public:
+    std::string name;
+    int roll_no;
+};
+class Teacher
+{
+public:
+    std::string subject;
+    double salary;
+};
+class TA : public Student, public Teacher
+{
+};
+int main()
+{
+    TA t1;
+    t1.name = "Chanamati";
+    t1.roll_no = 1234;
+    t1.subject = "Propulsion";
+    t1.salary = 30000;
+    std::cout << t1.name << std::endl;
+    std::cout << t1.salary;
+}
